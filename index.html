@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Videos Educativos - Obesidad Infantil</title>
+  <style>
+    :root {
+      --primary-color: #2b6cb0;
+      --secondary-color: #2c7a7b;
+      --bg-color: #f7fafc;
+      --card-bg: #ffffff;
+      --text-color: #2d3748;
+      --border-radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #4a5568;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      padding: 15px 20px;
+      background-color: #edf2f7;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .card-header h2 {
+      font-size: 1.25rem;
+      color: #1a202c;
+    }
+
+    /* Contenedor responsivo para videos de YouTube (Relación 16:9) */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .card-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: #718096;
+      margin-bottom: 20px;
+    }
+
+    .buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-ninos {
+      background-color: #319795;
+      color: #ffffff;
+    }
+
+    .btn-ninos:hover {
+      background-color: #2c7a7b;
+    }
+
+    .btn-padres {
+      background-color: #3182ce;
+      color: #ffffff;
+    }
+
+    .btn-padres:hover {
+      background-color: #2b6cb0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #a0aec0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Prueba de Concepto: Videos Educativos sobre Salud Infantil</h1>
+    <p>Por favor, seleccione un video, mírelo completo y posteriormente complete los formularios de evaluación para niños y padres.</p>
+  </header>
+
+  <main class="grid-container">
+
+    <!-- VIDEO 1 -->
+    <article class="card">
+      <div class="card-header">
+        <h2>1. Obesidad Infantil</h2>
+      </div>
+      <div class="video-container">
+        <!-- Reemplaza ID_DEL_VIDEO_1 por el ID real de tu video de YouTube -->
+        <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_1" title="1. Obesidad Infantil" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p>Video introductorio sobre los conceptos básicos de salud y nutrición infantil.</p>
+        <div class="buttons-group">
+          <!-- Reemplaza LINK_FORMULARIO_NINOS por la URL pública del Google Form -->
+          <a href="LINK_FORMULARIO_NINOS" target="_blank" class="btn btn-ninos">👦 Evaluaci&oacute;n Ni&ntilde;os</a>
+          <!-- Reemplaza LINK_FORMULARIO_PADRES por la URL pública del Google Form -->
+          <a href="LINK_FORMULARIO_PADRES" target="_blank" class="btn btn-padres">👨‍👩‍👧 Evaluaci&oacute;n Padres</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- VIDEO 2 -->
+    <article class="card">
+      <div class="card-header">
+        <h2>2. Manejo de Antojos</h2>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_2" title="2. Manejo de Antojos" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p>Estrategias prácticas para identificar la saciedad y gestionar alimentos ultraprocesados.</p>
+        <div class="buttons-group">
+          <a href="LINK_FORMULARIO_NINOS" target="_blank" class="btn btn-ninos">👦 Evaluaci&oacute;n Ni&ntilde;os</a>
+          <a href="LINK_FORMULARIO_PADRES" target="_blank" class="btn btn-padres">👨‍👩‍👧 Evaluaci&oacute;n Padres</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- VIDEO 3 -->
+    <article class="card">
+      <div class="card-header">
+        <h2>3. Lectura de Etiquetas</h2>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_3" title="3. Lectura de Etiquetas" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p>Guía visual y sencilla para interpretar la información nutricional de los empaques.</p>
+        <div class="buttons-group">
+          <a href="LINK_FORMULARIO_NINOS" target="_blank" class="btn btn-ninos">👦 Evaluaci&oacute;n Ni&ntilde;os</a>
+          <a href="LINK_FORMULARIO_PADRES" target="_blank" class="btn btn-padres">👨‍👩‍👧 Evaluaci&oacute;n Padres</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- VIDEO 4 -->
+    <article class="card">
+      <div class="card-header">
+        <h2>4. Rutinas en Casa</h2>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_4" title="4. Rutinas en Casa" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p>Recomendaciones para fomentar la actividad física y el descanso activo en familia.</p>
+        <div class="buttons-group">
+          <a href="LINK_FORMULARIO_NINOS" target="_blank" class="btn btn-ninos">👦 Evaluaci&oacute;n Ni&ntilde;os</a>
+          <a href="LINK_FORMULARIO_PADRES" target="_blank" class="btn btn-padres">👨‍👩‍👧 Evaluaci&oacute;n Padres</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Proyecto de Investigación en Salud Digital y Usabilidad UX.</p>
+  </footer>
+
+</body>
+</html>
